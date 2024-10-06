@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Pranish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: rgb(0, 0, 33);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu ul li {
+      margin: 0 20px;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .projects-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .projects-section .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .projects-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #9400d3;
+    }
+
+    .projects-section .projects-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .projects-section .projects-container>div {
+      flex-basis: 45%;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgb(18, 18, 62);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .projects-section h3 {
+      font-size: 1.5rem;
+      color: #9400d3;
+    }
+
+    .projects-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .projects-section ul li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .projects-section .projects-container {
+        flex-direction: column;
+      }
+
+      .projects-section .projects-container>div {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="projects-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-container">
+          <div class="recent-projects">
+            <h3>Recent Projects</h3>
+            <ul>
+              <li>Python Calculator</li>
+              <li>My own Portfolio</li>
+              <li>Strongest Password Generator</li>
+              <li>To Do List</li>
+              <li>Registration forms</li>
+            </ul>
+          </div>
+          <div class="future-projects">
+            <h3>Future Projects</h3>
+            <ul>
+              <li>Video games</li>
+              <li>App developing</li>
+              <li>Responsive Websites</li>
+              <li>Operating System</li>
+              <li>Artificial Intelligence Tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    window.onload = function () {
+      gsap.from(".recent-projects, .future-projects", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        stagger: 0.5,
+      });
+    };
+    document.oncontextmenu = (event) => {
+      event.preventDefault();
+      alert("Right-click is disabled.");
+    }
+
+    document.onkeydown = (e) => {
+      // Prevent F12 (Inspect Element)
+      if (e.key === "F12") {
+        e.preventDefault();
+        alert("Inspecting elements is disabled.");
+      }
+
+      // Prevent Ctrl+U (View Page Source)
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+        alert("Viewing page source is disabled.");
+      }
+
+      // Prevent Ctrl+C (Copy)
+      if (e.ctrlKey && e.key === "c") {
+        e.preventDefault();
+        alert("Copying is disabled.");
+      }
+
+      // Prevent Ctrl+V (Paste)
+      if (e.ctrlKey && e.key === "v") {
+        e.preventDefault();
+        alert("Pasting is disabled.");
+      }
+    };
+
+  </script>
+</body>
+
+</html>
