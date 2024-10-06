@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranish - Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+            min-height: 100vh;
+            /* Full height */
+        }
+
+        h1 {
+            color: #9400d3;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            opacity: 1;
+            /* Make sure it's visible */
+        }
+
+        .service {
+            background-color: rgb(0, 0, 50);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            /* Fixed width for uniformity */
+            transition: transform 0.3s;
+            opacity: 1;
+            /* Ensure visibility */
+        }
+
+        .service h3 {
+            color: #9400d3;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .service {
+                width: 90%;
+                /* Take more space on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="services-section">
+        <h1>My Services</h1>
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>I build responsive and user-friendly websites to help businesses grow their online presence.</p>
+        </div>
+        <div class="service">
+            <h3>App Development</h3>
+            <p>I develop mobile applications that are intuitive and engaging for users.</p>
+        </div>
+        <div class="service">
+            <h3>Graphic Design</h3>
+            <p>I create visually appealing designs that communicate your brand's message effectively.</p>
+        </div>
+        <div class="service">
+            <h3>Editing</h3>
+            <p>I Edit contents provide by clients.</p>
+        </div>
+    </section>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // Simple GSAP animations to ensure visibility
+        gsap.from("h1", { duration: 1, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".service", {
+            duration: 1.5,
+            opacity: 0,
+            y: 30,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
+        document.oncontextmenu = (event) => {
+            event.preventDefault();
+            alert("Right-click is disabled.");
+        }
+
+        document.onkeydown = (e) => {
+            // Prevent F12 (Inspect Element)
+            if (e.key === "F12") {
+                e.preventDefault();
+                alert("Inspecting elements is disabled.");
+            }
+
+            // Prevent Ctrl+U (View Page Source)
+            if (e.ctrlKey && e.key === "u") {
+                e.preventDefault();
+                alert("Viewing page source is disabled.");
+            }
+
+            // Prevent Ctrl+C (Copy)
+            if (e.ctrlKey && e.key === "c") {
+                e.preventDefault();
+                alert("Copying is disabled.");
+            }
+
+            // Prevent Ctrl+V (Paste)
+            if (e.ctrlKey && e.key === "v") {
+                e.preventDefault();
+                alert("Pasting is disabled.");
+            }
+        };
+
+    </script>
+</body>
+
+</html>
