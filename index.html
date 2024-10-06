@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranish - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Port<span style="color: white;">folio</span></div>
+            <div class="right">
+                <ul>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='projects.html' target='_blank'>Projects</a></li>
+                    <li><a href='services.html' target="_blank">Services</a></li>
+                    <li><a href='contactme.html' target="_blank">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Namaste, My name is <span class="purple">Pranish Siwakoti</span>
+                <div>and</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="main.png" alt="" style="max-width: 100%; height: auto;">
+            </div>
+        </section>
+
+        <hr /> <!-- Animated Horizontal Line -->
+
+        <section class="secondSection">
+            <h1 style="font-size: 50px;;"><span class="purple">Intro</span>duction</h1>
+            <p>
+                <br>
+                Hi there! I’m <b>Pranish Siwakoti</b>, a student based in Kathmandu, Nepal. Over the past 5 years, I’ve
+                had the chance to work on some amazing projects across various fields. I’m passionate about creating
+                work that not only looks great but also makes a positive impact on people and the world around us.
+                Whether it’s studying or freelancing, I always aim to bring creativity and purpose to whatever I’m
+                doing.
+
+                When I’m not busy, you’ll find me playing video games, cooking, cycling, walking, editing contents,
+                traveling, and sometime coding—basically anything that keeps me curious and active! These hobbies
+                inspire me and often spark fresh ideas that I bring into my work. I believe that life outside of work
+                fuels my creativity and helps me think outside the box. 🌍✨
+
+                I also love connecting with people who share similar interests. If you’re into coding, gaming, or any of
+                the stuff I’m passionate about, I’d love to hear from you! Let’s swap ideas and maybe even collaborate
+                on something exciting.
+
+                Feel free to explore my portfolio and check out what I’ve been up to. If you’re interested in working
+                together or just want to chat, you can find me on social media—don’t be shy! I’m always open to new
+                opportunities and conversations. 😊
+
+                <b>Thanks for</b> reading my Introduction, and I hope to connect with you soon!
+            </p>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#element", {
+            strings: [
+                "What is your name?",
+                "Where do you live?",
+                "What are your interest and hobbies?",
+                "What  your goal in your life?",
+                "What is your dream job?"
+            ],
+            typeSpeed: 40,
+        });
+
+        document.oncontextmenu = (event) => {
+    event.preventDefault();
+    alert("Right-click is disabled.");
+}
+
+document.onkeydown = (e) => {
+    // Prevent F12 (Inspect Element)
+    if (e.key === "F12") {
+        e.preventDefault();
+        alert("Inspecting elements is disabled.");
+    }
+
+    // Prevent Ctrl+U (View Page Source)
+    if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+        alert("Viewing page source is disabled.");
+    }
+
+    // Prevent Ctrl+C (Copy)
+    if (e.ctrlKey && e.key === "c") {
+        e.preventDefault();
+        alert("Copying is disabled.");
+    }
+
+    // Prevent Ctrl+V (Paste)
+    if (e.ctrlKey && e.key === "v") {
+        e.preventDefault();
+        alert("Pasting is disabled.");
+    }
+};
+
+    </script>
+</body>
+
+</html>
